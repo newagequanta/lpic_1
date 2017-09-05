@@ -15,7 +15,7 @@ while [[ $TRIES -lt 3 ]]; do
 		exit 0
 	else
 		echo "Try again"
-		TRIES="$(( TRIES+1 ))"
+		TRIES=$(( $TRIES+1 ))
 	fi
 done
 
