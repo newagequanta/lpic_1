@@ -6,6 +6,14 @@ echo "Usage -> test-if.sh <ELEMENT_1> <ELEMENT_2>"
 echo ""
 echo ""
 
+#testing if quotes are needed or not for integer comparison
+
+if [[ $1 == 0 ]]; then
+    echo First argument is a 0
+else
+    echo First argument is not a 0
+fi
+
 if [ $1 = $2 ]; then
     echo "---------------------------"
     echo "---------------------------"
