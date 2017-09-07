@@ -1,0 +1,14 @@
+#15 02,14 * * * ll /var > dir.out
+#1-59/2 * * * * echo Cron On > cron.out
+*/6 * * * * echo "1 $PATH  under default path" >> path.txt
+1-59/6 * * * * echo "2 $PATH  under default path" >> path.txt
+
+PATH=/bin:/sbin:/usr/bin
+2-59/6 * * * * echo "1 $PATH under /bin:/sbin:/usr/bin">> path.txt
+3-59/6 * * * * echo "2 $PATH under /bin:/sbin:/usr/bin">> path.txt
+
+PATH=/bin
+4-59/6 * * * * echo "1 $PATH under /bin">> path.txt
+5-59/6 * * * * echo "2 $PATH under /bin">> path.txt
+
+
